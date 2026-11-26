@@ -9,7 +9,11 @@ library(dplyr)
 library(ggplot2)
 library(minpack.lm)   # nlsLM - ajuste do modelo nao-linear Chapman-Richards
 
-dados <- read_excel("inventario.xlsx")
+# Executar a partir da raiz do repositorio: Rscript scripts/01_relacao_hipsometrica.R
+dir.create("resultados/tabelas", recursive = TRUE, showWarnings = FALSE)
+dir.create("resultados/figuras", recursive = TRUE, showWarnings = FALSE)
+
+dados <- read_excel("dados/inventario.xlsx")
 dados$HT_medida_flag <- dados$HT > 0
 
 
@@ -104,7 +108,7 @@ grafico_hipsometrico <- ggplot(medidas, aes(x = DAP, y = HT)) +
        x = "DAP (cm)", y = "Altura total - HT (m)") +
   theme_minimal()
 print(grafico_hipsometrico)
-ggsave("grafico_hipsometrico.png", grafico_hipsometrico, width = 7, height = 5, dpi = 150)
+ggsave("resultados/figuras/grafico_hipsometrico.png", grafico_hipsometrico, width = 7, height = 5, dpi = 150, bg = "white")
 
 
 # =============================================================================
@@ -124,7 +128,7 @@ stopifnot(sum(dados$ORIGEM_HT == "medida") == 109)
 stopifnot(sum(dados$ORIGEM_HT == "estimada") == 106)
 stopifnot(nrow(dados) == 215)
 
-write_xlsx(dados, "inventario_completo.xlsx")
+write_xlsx(dados, "resultados/tabelas/inventario_completo.xlsx")
 
 
 # =============================================================================
