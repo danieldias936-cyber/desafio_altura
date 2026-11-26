@@ -16,7 +16,7 @@ Identificar o padrão de amostragem da altura no inventário, ajustar a relaçã
 
 ## 🗂️ Dados
 
-Mesmo inventário do [Desafio 01](https://github.com/danieldias936-cyber/desafio-01-diametro): talhão 8, 6 parcelas, 215 árvores. A altura (HT) foi medida apenas nas fileiras centrais (3, 4 e 5) de cada parcela: 109 árvores (50,7%).
+Mesmo inventário do [Desafio 01](https://github.com/danieldias936-cyber/desafio-diametro-eucalipto): talhão 8, 6 parcelas, 215 árvores. A altura (HT) foi medida apenas nas fileiras centrais (3, 4 e 5) de cada parcela: 109 árvores (50,7%).
 
 Arquivo: [`dados/inventario.xlsx`](dados/inventario.xlsx).
 
@@ -52,7 +52,7 @@ $$HT = 32{,}739 \cdot \left(1 - e^{-0{,}2227 \cdot DAP}\right)^{5{,}333}$$
 ## 📁 Estrutura do repositório
 
 ```text
-desafio-02-altura/
+desafio_altura/
 ├── dados/
 │   └── inventario.xlsx                 # inventário original (HT = 0 = não medida)
 ├── scripts/
@@ -88,15 +88,15 @@ Rscript scripts/01_relacao_hipsometrica.R
 
 | # | Desafio | |
 |:-:|---|:-:|
-| 01 | [Diâmetro](https://github.com/danieldias936-cyber/desafio-01-diametro) | |
+| 01 | [Diâmetro](https://github.com/danieldias936-cyber/desafio-diametro-eucalipto) | |
 | **02** | **Altura e relação hipsométrica** | 📍 você está aqui |
-| 03 | [Volume e forma](https://github.com/danieldias936-cyber/desafio-03-volume-e-forma) | |
+| 03 | [Volume e forma](https://github.com/danieldias936-cyber/desafio_volume-e-forma) | |
 | 04 | [Volume reduzido e equações de volume](https://github.com/danieldias936-cyber/desafio-04-volume-reduzido-e-tabela) | |
-| 05 | [Taper e sortimento](https://github.com/danieldias936-cyber/desafio-05-taper-e-sortimento) | |
+| 05 | [Taper e sortimento](https://github.com/danieldias936-cyber/desafio_taper_e_sortimento) | |
 | 06 | [Amostragem de Bitterlich](https://github.com/danieldias936-cyber/desafio-06-bitterlich) | |
 | 07 | Classificação de sítios florestais | ⏳ |
-| 08 | [Validação do índice de sítio](https://github.com/danieldias936-cyber/desafio-08-validacao-sitio) | |
-| 09 | [Crescimento e produção (Clutter)](https://github.com/danieldias936-cyber/desafio-09-modelo-clutter) | |
+| 08 | [Validação do índice de sítio](https://github.com/danieldias936-cyber/desafio-08) | |
+| 09 | [Crescimento e produção (Clutter)](https://github.com/danieldias936-cyber/desafio-09) | |
 
 ## 👤 Autor
 
